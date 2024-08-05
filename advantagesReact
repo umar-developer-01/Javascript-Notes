@@ -1,0 +1,38 @@
+// React uses Virtual DOM 
+// It also uses jsx
+// Large developmnent community 
+// Re-usable Components
+// Hooks 
+
+// React creates a virtual representation of the UI components. 
+// This virtual representation is a lightweight JavaScript object that mirrors the structure of the real DOM.
+
+
+
+// Step 1 
+// Initial Rendering: when the app starts, the entire UI is represented as a Virtual DOM. 
+// React elements are created and rendered into the virtual structure.
+
+// Step 2  
+// State and Props Changes: as the states and props change in the app, React re-renders the affected components in the virtual DOM. 
+// These changes do not immediately impact the real DOM.
+
+// Step 3  
+// Comparison Using Diff Algorithm: React then uses a diffing algorithm to compare the current version of the Virtual DOM with the previous version. 
+// This process identifies the differences (or "diffs") between the two versions.
+
+// Step 4
+// Reconciliation Process: based on the differences identified, React determines the most efficient way to update the real DOM. 
+// Only the parts of the real DOM that need to be updated are changed, rather than re-rendering the entire UI. This selective updating is quick and performant.
+
+// Step 5 
+// Update to the Real DOM: finally, React applies the necessary changes to the real DOM. 
+// This might involve adding, removing, or updating elements based on the differences detected in step 3.
+
+// WHat happens if update the state directly 
+// React keeps a track of whole of its Virtual DOM whenever a there is a change in the application like whenever the props or state change 
+// All the components are re-rendered and re-creates a new virtual dom and then this newly created virtual dom is compared with 
+// previously built virtual dom and the difference found are reflected in the original dom 
+// When you update the state directly then it will change the reference of the state in the previous virtual dom as well
+// hence , now react does not know what has actualy changed and we will not be able to see the chnage of state 
+// So it would not reflect in the original dom.
